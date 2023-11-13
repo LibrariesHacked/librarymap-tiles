@@ -11,7 +11,7 @@ def download_geojson():
     """Download the geojson file """
 
     # Set the Accepts header to application/geo+json
-    headers = {"Accepts": "application/geo+json"}
+    headers = {"Accept": "application/geo+json"}
     response = requests.get(GEOJSON_URL, headers=headers, timeout=10)
     return response.json()
 
@@ -26,6 +26,7 @@ def save_geojson(data):
     # Save the geojson file
     with open('data/libraries.geojson', 'w', encoding='utf-8') as f:
         json.dump(data, f)
+
 
 geojson = download_geojson()
 save_geojson(geojson)
