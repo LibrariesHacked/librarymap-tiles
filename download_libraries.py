@@ -4,7 +4,7 @@ import json
 import os
 import requests
 
-GEOJSON_URL = 'https://api.librarydata.uk/libraries'
+GEOJSON_URL = 'https://api.librarydata.uk/libraries?limit=5000'
 
 
 def download_geojson():
