@@ -17,7 +17,7 @@ This repository is published as a GitHub pages site, which makes the tiles avail
 
 ## How to use
 
-These tiles are made available via GitHub pages and a custom domain. They are available at `https://tiles.librarydata.uk/libraries/{z}/{x}/{y}.mvt`
+These tiles are made available via GitHub pages and a custom domain. They are available at `https://tiles.librarymap.co.uk/libraries/{z}/{x}/{y}.mvt`
 
 ## Licence
 
