@@ -3,7 +3,7 @@ name: Generate tiles
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'  # every day at midnight
+    - cron: "0 0 * * *" # every day at midnight
 
 jobs:
   build:
@@ -11,17 +11,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up Homebrew
+      - name: set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - name: Install tippecanoe
+      - name: install tippecanoe
         run: brew install tippecanoe
 
-      - name: Run python download script
+      - name: run python download script
         run: python3 download_libraries.py
 
-      - name: Run the generate shell file
+      - name: run the generate shell file
         run: ./generate.sh
 
       - name: check for changes
